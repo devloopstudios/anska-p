@@ -1,0 +1,4 @@
+{
+    "greeting" : ["Hello", "Hi", "Sup", "Hey"],
+    "name" : ["@name", "My name is @name", "They call me as @name"]
+}
