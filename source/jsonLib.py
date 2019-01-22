@@ -16,7 +16,7 @@ def getValue(path, field, default):
     else:
         return value
 
-def getColumnByData(path, value):
+def getColumnByData(path, field, default):
     #todo : finish here catching arrays
     value = None
     try:    
