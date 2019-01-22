@@ -1,4 +1,4 @@
-import json
+import json, random
 
 def getValue(path, field, default):
 
@@ -16,21 +16,37 @@ def getValue(path, field, default):
     else:
         return value
 
-def getColumnByData(path, field, default):
-    #todo : finish here catching arrays
+def getValueFromList(path, field, default, position):
+
     value = None
     try:    
         with open(path, 'r') as file:
             jsonFile = json.load(file)  
 
-        value = format(jsonFile[field])
+        value = jsonFile[field]
     except:
         return default
 
-    if (value is None):        
-        return  default
+    if isinstance(value, list):        
+        if (position == -1):
+            position = random.randint(0,len(value)-1)
+        return value[position]    
     else:
-        return value   
+        return default
+
+def getColumnByData(path, value, default):
+
+    jsonFile = open(path, 'r')
+
+    values = json.load(jsonFile)
+
+    jsonFile.close()
+
+    for key, data in values.iteritems():
+       if value in data:
+           return key
+
+    return default   
 
 
 def setValue(path, field, value):

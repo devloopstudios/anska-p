@@ -12,25 +12,32 @@ class Reader:
         self.fieldInput = 'text'
         self.fieldOutput = 'text'
 
-        self.defaultEmptyValue = "nullbot"
+        self.defaultEmptyValue = 'null'
+        self.messageFinish = 'Done'
+
+        self.positionListValue = -1
+
     
     def readRequest(self):
-        self.requestValue = jsonLib.getValue(self.fileInput,self.fieldInput,self.defaultEmptyValue)
+        self.requestValue = jsonLib.getValue(self.fileInput, self.fieldInput, self.defaultEmptyValue)
 
     def requestTypeSearch(self):
-        self.requestType = jsonLib.getColumnByData(self.fileRequest,self.requestValue,self.defaultEmptyValue) 
+        self.requestType = jsonLib.getColumnByData(self.fileRequest, self.requestValue, self.defaultEmptyValue) 
     
     def replySearch(self):
-        self.replyValue = jsonLib.getValue(self.fileReply,self.requestType,self.defaultEmptyValue)  
+        self.replyValue = jsonLib.getValueFromList(self.fileReply, self.requestType, self.defaultEmptyValue, self.positionListValue)  
+
+    def replyWrite(self):
+        jsonLib.setValue(self.fileOutput, self.fieldOutput, self.replyValue)
 
     def process(self):
-        print("hello world")  
+        self.readRequest() 
+        self.requestTypeSearch()
+        self.replySearch()
+        self.replyWrite()
+        print(self.messageFinish)
 
-
-        
-
-print(jsonLib.getValue('../input/input.json','text','nothing here'));
-
-jsonLib.setValue('../output/output.json','text','hi');
+reader = Reader()
+reader.process()
 
 
