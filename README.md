@@ -2,9 +2,9 @@
 A simple chat and function bot'.
 
 # Goals
- [ ] receive text from user as parameter
+ [Done] receive text from user as parameter
  
- [ ] send a answer to the user as return 
+ [Done] send a answer to the user as return 
  
  [ ] save the user requests
  
@@ -46,7 +46,7 @@ A simple chat and function bot'.
  
  [ ] make the answer in audio
  
- [ ] use linux to develop (test only)
+ [Done] use linux to develop (test only)
  
  # Test mode
  
