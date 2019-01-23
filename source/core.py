@@ -16,19 +16,23 @@ class Reader:
         self.messageFinish = 'Done'
 
         self.positionListValue = -1
-
+        
+        self.jsonManager = JsonManager()
     
+    def __del__(self):
+        del jsonManager;
+        
     def readRequest(self):
-        self.requestValue = jsonLib.getValue(self.fileInput, self.fieldInput, self.defaultEmptyValue)
+        self.requestValue = jsonManager.getValue(self.fileInput, self.fieldInput, self.defaultEmptyValue)
 
     def requestTypeSearch(self):
-        self.requestType = jsonLib.getColumnByData(self.fileRequest, self.requestValue, self.defaultEmptyValue) 
+        self.requestType = jsonManager.getColumnByData(self.fileRequest, self.requestValue, self.defaultEmptyValue) 
     
     def replySearch(self):
-        self.replyValue = jsonLib.getValueFromList(self.fileReply, self.requestType, self.defaultEmptyValue, self.positionListValue)  
+        self.replyValue = jsonManager.getValueFromList(self.fileReply, self.requestType, self.defaultEmptyValue, self.positionListValue)  
 
     def replyWrite(self):
-        jsonLib.setValue(self.fileOutput, self.fieldOutput, self.replyValue)
+        jsonManager.setValue(self.fileOutput, self.fieldOutput, self.replyValue)
 
     def process(self):
         self.readRequest() 
@@ -39,5 +43,6 @@ class Reader:
 
 reader = Reader()
 reader.process()
+del reader
 
 
