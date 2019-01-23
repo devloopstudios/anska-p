@@ -20,7 +20,7 @@ class Reader:
         self.jsonManager = JsonManager()
     
     def __del__(self):
-        del jsonManager;
+        del jsonManager
         
     def readRequest(self):
         self.requestValue = jsonManager.getValue(self.fileInput, self.fieldInput, self.defaultEmptyValue)
