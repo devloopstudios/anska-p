@@ -6,6 +6,8 @@ A simple chat and function bot'.
  
  [Done] send a answer to the user as return 
  
+ [ ] functions
+ 
  [ ] save the user requests
  
  [ ] learn to use a data response
@@ -15,9 +17,7 @@ A simple chat and function bot'.
  [ ] online connection
  
  [ ] better text search reference
- 
- [ ] functions
- 
+  
  [ ] intercept functions inside of messages
  
  [ ] can edit the messages through the bot
