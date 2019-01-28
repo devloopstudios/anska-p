@@ -8,6 +8,8 @@ A simple chat and function bot'.
  
  [ ] functions
  
+ [ ] intercept functions inside of messages
+ 
  [ ] save the user requests
  
  [ ] learn to use a data response
@@ -17,8 +19,6 @@ A simple chat and function bot'.
  [ ] online connection
  
  [ ] better text search reference
-  
- [ ] intercept functions inside of messages
  
  [ ] can edit the messages through the bot
  
