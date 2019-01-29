@@ -1,4 +1,4 @@
-import jsonLib
+import jsonClass
 
 class Reader:
     def __init__(self):
@@ -17,7 +17,7 @@ class Reader:
 
         self.positionListValue = -1
         
-        self.jsonManager = JsonManager()
+        self.jsonManager = jsonClass.JsonManager()
     
     def __del__(self):
         del jsonManager
