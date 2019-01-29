@@ -2,7 +2,7 @@ import json, random
 
 class JsonManager():
 
-    def getValue(path, field, default):
+    def getValue(self, path, field, default):
 
         value = None
         try:    
@@ -18,7 +18,7 @@ class JsonManager():
         else:
             return value
 
-    def getValueFromList(path, field, default, position):
+    def getValueFromList(self, path, field, default, position):
 
         value = None
         try:    
@@ -36,7 +36,7 @@ class JsonManager():
         else:
             return default
 
-    def getColumnByData(path, value, default):
+    def getColumnByData(self, path, value, default):
 
         jsonFile = open(path, 'r')
 
@@ -51,7 +51,7 @@ class JsonManager():
         return default   
 
 
-    def setValue(path, field, value):
+    def setValue(self, path, field, value):
 
         jsonFile = None
 

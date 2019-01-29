@@ -20,19 +20,19 @@ class Reader:
         self.jsonManager = jsonManagerClass.JsonManager()
     
     def __del__(self):
-        del jsonManager
+        del self.jsonManager
         
     def readRequest(self):
-        self.requestValue = jsonManager.getValue(self.fileInput, self.fieldInput, self.defaultEmptyValue)
+        self.requestValue = self.jsonManager.getValue(self.fileInput, self.fieldInput, self.defaultEmptyValue)
 
     def requestTypeSearch(self):
-        self.requestType = jsonManager.getColumnByData(self.fileRequest, self.requestValue, self.defaultEmptyValue) 
+        self.requestType = self.jsonManager.getColumnByData(self.fileRequest, self.requestValue, self.defaultEmptyValue) 
     
     def replySearch(self):
-        self.replyValue = jsonManager.getValueFromList(self.fileReply, self.requestType, self.defaultEmptyValue, self.positionListValue)  
+        self.replyValue = self.jsonManager.getValueFromList(self.fileReply, self.requestType, self.defaultEmptyValue, self.positionListValue)  
 
     def replyWrite(self):
-        jsonManager.setValue(self.fileOutput, self.fieldOutput, self.replyValue)
+        self.jsonManager.setValue(self.fileOutput, self.fieldOutput, self.replyValue)
 
     def process(self):
         self.readRequest() 
