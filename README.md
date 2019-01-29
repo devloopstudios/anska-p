@@ -6,9 +6,9 @@ A simple chat and function bot'.
  
  [Done] send a answer to the user as return 
  
- [ ] functions
+ [Done] functions
  
- [ ] intercept functions inside of messages
+ [Done] intercept functions inside of messages
  
  [ ] save the user requests
  
