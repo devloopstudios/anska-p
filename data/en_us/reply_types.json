@@ -1,4 +1,6 @@
 {
     "greeting" : ["Hello", "Hi", "Sup", "Hey"],
-    "name" : ["@name", "My name is @name", "They call me as @name"]
+    "name" : ["@myName", "My name is @myName.", "They call me as @myName."],
+    "datetime" : ["Currently is @datetime"],
+    "birthdate" : ["I was born in @myBirthdate", "My birthdate: @myBirthdate"]
 }

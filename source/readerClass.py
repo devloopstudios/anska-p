@@ -1,4 +1,5 @@
 import jsonManagerClass
+import expressionParserClass
 
 class Reader:
     def __init__(self):
@@ -33,10 +34,16 @@ class Reader:
 
     def replyWrite(self):
         self.jsonManager.setValue(self.fileOutput, self.fieldOutput, self.replyValue)
+    
+    def expressionValidator(self):
+        expressionParser = expressionParserClass.ExpressionParser()  
+        self.replyValue = expressionParser.recognize(self.replyValue)
+        del expressionParser
 
     def process(self):
         self.readRequest() 
         self.requestTypeSearch()
         self.replySearch()
+        self.expressionValidator()
         self.replyWrite()
         print(self.messageFinish)

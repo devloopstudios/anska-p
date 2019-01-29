@@ -1,4 +1,6 @@
 {
     "greeting" : ["hi", "hello"],
-    "name" : ["what's your name?", "name", "what is your name?"]
+    "name" : ["what's your name?", "name", "what is your name?"],
+    "datetime" : ["what time is it?", "time", "what date is it?", "today", "date", "now"],
+    "birthdate" : ["birth", "birthdate", "born"]
 }
