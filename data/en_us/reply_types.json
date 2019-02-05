@@ -2,5 +2,6 @@
     "greeting" : ["Hello", "Hi", "Sup", "Hey"],
     "name" : ["@myName", "My name is @myName.", "They call me as @myName."],
     "datetime" : ["Currently is @datetime"],
-    "birthdate" : ["I was born in @myBirthdate", "My birthdate: @myBirthdate"]
+    "birthdate" : ["I was born in @myBirthdate", "My birthdate: @myBirthdate"],
+    "null" : ["Sorry, I cannot understand you!", "What? That's not make sense to me!", "Hey, I'm a bot... I not ready to read this..."]
 }
