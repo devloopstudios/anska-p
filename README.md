@@ -10,6 +10,8 @@ A simple chat and function bot'.
  
  [Done] intercept functions inside of messages
  
+ [ ] show a default message if it not recognize the input message
+ 
  [ ] save the user requests
  
  [ ] learn to use a data response
