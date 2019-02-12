@@ -1,0 +1,15 @@
+{
+    "requestHistory" : {
+        "userRequest" : [
+            {
+                "dateTime" : "2019-02-12:19:15:32",
+                "requestText" : "What's your name?",
+                "answered": "yes"
+            },
+            {
+                "dateTime" : "2019-02-12:19:34:55",
+                "requestText" : "Blablabla",
+                "answered": "no"
+            }]
+    }
+}
