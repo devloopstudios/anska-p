@@ -15,6 +15,8 @@ class Reader:
 
         self.defaultEmptyValue = 'null'
         self.messageFinish = 'Done'
+        self.command = ''
+        self.useCommand = False
 
         self.positionListValue = -1
         
@@ -22,9 +24,16 @@ class Reader:
     
     def __del__(self):
         del self.jsonManager
+
+    def setCommand(self, command):
+        self.command = command
+        self.useCommand = True
         
     def readRequest(self):
-        self.requestValue = self.jsonManager.getValue(self.fileInput, self.fieldInput, self.defaultEmptyValue)
+        if (not self.useCommand):
+            self.requestValue = self.jsonManager.getValue(self.fileInput, self.fieldInput, self.defaultEmptyValue)
+        else:
+            self.requestValue = self.command
 
     def requestTypeSearch(self):
         self.requestType = self.jsonManager.getColumnByData(self.fileRequest, self.requestValue, self.defaultEmptyValue) 
@@ -41,9 +50,13 @@ class Reader:
         del expressionParser
 
     def process(self):
+
         self.readRequest() 
         self.requestTypeSearch()
         self.replySearch()
         self.expressionValidator()
         self.replyWrite()
-        print(self.messageFinish)
+        if (self.useCommand):
+            print(self.replyValue)
+        else:
+            print(self.messageFinish)
