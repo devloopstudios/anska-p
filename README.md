@@ -1,7 +1,11 @@
 # anska-p
-A simple chat and function bot'.
 
-# Goals
+a bot in development
+
+# goals
+
+# step 01: chatbot
+
  [Done] receive text from user as parameter
  
  [Done] send a answer to the user as return 
@@ -11,44 +15,59 @@ A simple chat and function bot'.
  [Done] intercept functions inside of messages
  
  [Done] show a default message if it not recognize the input message
- 
- [Done] save the user requests
- 
- [ ] learn to use a data response
- 
+
  [ ] make a DB
- 
- [ ] online connection
- 
- [ ] better text search reference
- 
+
  [ ] can edit the messages through the bot
- 
- [ ] use threads to make schedules list
- 
- [ ] can create and save system variables
- 
- [ ] kwownledge to learn what means the questions  (what is, looking for, search, tell me)
- 
- [ ] make titles for each topic
- 
- [ ] create categories
- 
+
+ [ ] save the user requests
+
+ [ ] online connection
+
+ # step 02: taskbot
+
  [ ] add todo list, manage todo with searches and commands
- 
- [ ] make it restful API server and return must be in json
- 
- [ ] individual use with token
- 
+
+ [ ] create categories to learn
+
+ [ ] make titles for each topic
+
+ [ ] kwownledge to learn what means the questions  (what is, looking for, search, tell me)
+
+ [ ] make a clock alarm 
+
+ [ ] use threads to make schedules list
+
  [ ] add news search
- 
+
  [ ] video youtube downloader
  
  [ ] make it an audio reader
  
  [ ] make the answer in audio
+
+ [ ] can create, edit and save system variables
+
+ # step 03: smartbot
+
+ [ ] apply AI (study case)
+
+ [ ] apply neural networks (study case)
+
+ [ ] apply machine learning (study case)
+
+ [ ] apply deep learning (study case)
+
+ # step 04: funnybot
+
+ [ ] teach the bot play a game (tic tac toe or HEX)
+
+ # step 05: onlinebot
+
+ [ ] make it restful API server and return must be in json
  
- [Done] use linux to develop (test only)
+ [ ] individual use with token
+ 
  
  # Test mode
  
