@@ -4,7 +4,7 @@ a bot in development
 
 # goals
 
-# step 01: chatbot
+# step 01: chatbot and structure
 
  [Done] receive text from user as parameter
  
@@ -21,6 +21,8 @@ a bot in development
  [ ] can edit the messages through the bot
 
  [ ] save the user requests
+ 
+ [ ] make a pip package
 
  # step 02: taskbot
 
