@@ -22,8 +22,6 @@ a bot in development
 
  [ ] save the user requests
 
- [ ] online connection
-
  # step 02: taskbot
 
  [ ] add todo list, manage todo with searches and commands
@@ -68,6 +66,7 @@ a bot in development
  
  [ ] individual use with token
  
+ [ ] online connection
  
  # Test mode
  
